@@ -8,8 +8,8 @@ const Repo = ({ owner, name }) => {
   const repo = useSelector((state) => state.repo.repo);
 
   useEffect(() => {
-    console.log(name);
-    dispatch(fetchRepo(owner, name));
+    const url = `${owner}/${name}`
+    dispatch(fetchRepo(url));
   }, [owner, name]);
 
   return (
