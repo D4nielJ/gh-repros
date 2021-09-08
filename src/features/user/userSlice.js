@@ -21,12 +21,7 @@ export const userSlice = createSlice({
     reposStatus: 'idle',
     error: null,
   },
-  reducers: {
-    resetStatus(state) {
-      state.userStatus = 'idle';
-      state.reposStatus = 'idle';
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchUser.pending, (state) => {
@@ -54,5 +49,4 @@ export const userSlice = createSlice({
   },
 });
 
-export const { resetStatus } = userSlice.actions;
 export default userSlice.reducer;

@@ -2,24 +2,16 @@ import { useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import Search from '../home/search';
-import { fetchRepos, fetchUser, resetStatus } from './userSlice';
+import { fetchRepos, fetchUser } from './userSlice';
 
 const User = ({ id }) => {
   const user = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
-  const userStatus = useSelector((state) => state.user.userStatus);
-  const reposStatus = useSelector((state) => state.user.reposStatus);
   const repos = useSelector((state) => state.user.repos);
 
   useEffect(() => {
-    if (userStatus === 'idle') {
+    if (id !== user.login) {
       dispatch(fetchUser(id));
-    }
-    return dispatch(resetStatus());
-  }, [id]);
-
-  useEffect(() => {
-    if (reposStatus === 'idle') {
       dispatch(fetchRepos(id));
     }
   }, [id]);
