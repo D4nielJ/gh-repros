@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { PropTypes } from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import Search from '../home/search';
 import { fetchRepos, fetchUser, resetStatus } from './userSlice';
@@ -42,6 +43,10 @@ const User = ({ id }) => {
       <ul className="repos">{reposLi}</ul>
     </section>
   );
+};
+
+User.propTypes = {
+  id: PropTypes.string.isRequired,
 };
 
 export default User;

@@ -2,9 +2,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import Search from '../features/home/search';
 import User from '../features/user/user';
 
-const useQuery = () => {
-  return new URLSearchParams(useLocation().search);
-};
+const useQuery = () => new URLSearchParams(useLocation().search);
 
 const App = () => {
   const query = useQuery();
