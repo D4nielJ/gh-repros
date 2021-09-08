@@ -1,20 +1,26 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import Search from '../features/home/search';
 import User from '../features/user/user';
 
-const App = () => (
-  <Router basename={process.env.PUBLIC_URL}>
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
+const App = () => {
+  const query = useQuery();
+
+  return (
     <div className="App">
       <Switch>
         <Route path="/user">
-          <User />
+          <User id={query.get('id')} />
         </Route>
         <Route exact path="/">
           <Search />
         </Route>
       </Switch>
     </div>
-  </Router>
-);
+  );
+};
 
 export default App;
