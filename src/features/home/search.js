@@ -14,7 +14,7 @@ const Search = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(fetchUser(user));
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>

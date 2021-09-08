@@ -5,7 +5,6 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import userReducer from '../features/user/userSlice';
 
-
 const middlewares = [thunk, logger];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
