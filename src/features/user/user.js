@@ -43,7 +43,11 @@ const User = ({ id }) => {
 };
 
 User.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
 };
+
+User.defaultProps = {
+  id: '',
+}
 
 export default User;

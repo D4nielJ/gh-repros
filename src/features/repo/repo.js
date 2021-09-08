@@ -8,7 +8,7 @@ const Repo = ({ owner, name }) => {
   const repo = useSelector((state) => state.repo.repo);
 
   useEffect(() => {
-    const url = `${owner}/${name}`
+    const url = `${owner}/${name}`;
     dispatch(fetchRepo(url));
   }, [owner, name]);
 
@@ -30,8 +30,13 @@ const Repo = ({ owner, name }) => {
 };
 
 Repo.propTypes = {
-  owner: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  owner: PropTypes.string,
+  name: PropTypes.string,
 };
+
+Repo.defaultProps = {
+  owner: '',
+  name: '',
+}
 
 export default Repo;
