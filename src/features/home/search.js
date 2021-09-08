@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { fetchUser } from '../user/userSlice';
 
 const Search = () => {
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   const [user, setUser] = useState('');
 
