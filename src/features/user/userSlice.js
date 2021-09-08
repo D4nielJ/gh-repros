@@ -15,38 +15,44 @@ export const fetchRepos = createAsyncThunk('user/fetchRepos', async (username) =
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    login: null,
     user: {},
     repos: [],
-    status: 'idle',
+    userStatus: 'idle',
+    reposStatus: 'idle',
     error: null,
   },
-  reducers: {},
+  reducers: {
+    resetStatus(state) {
+      state.userStatus = 'idle';
+      state.reposStatus = 'idle';
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchUser.pending, (state) => {
-        state.status = 'pending';
+        state.userStatus = 'pending';
       })
       .addCase(fetchUser.fulfilled, (state, action) => {
         state.user = action.payload;
-        state.status = 'idle';
+        state.userStatus = 'fulfilled';
       })
       .addCase(fetchUser.rejected, (state) => {
-        state.status = 'rejected';
+        state.userStatus = 'rejected';
         state.error = 'Error 404';
       })
       .addCase(fetchRepos.pending, (state) => {
-        state.status = 'pending';
+        state.reposStatus = 'pending';
       })
       .addCase(fetchRepos.fulfilled, (state, action) => {
         state.repos = action.payload;
-        state.status = 'fulfilled';
+        state.reposStatus = 'fulfilled';
       })
       .addCase(fetchRepos.rejected, (state) => {
-        state.status = 'rejected';
+        state.reposStatus = 'rejected';
         state.error = 'Error';
       });
   },
 });
 
+export const { resetStatus } = userSlice.actions;
 export default userSlice.reducer;
