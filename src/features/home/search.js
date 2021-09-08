@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser } from '../user/userSlice';
 
 const Search = () => {
   const dispatch = useDispatch();
-
   const [user, setUser] = useState('');
+  const login = useSelector((state) => state.user.user.login);
 
   const handleUser = (e) => {
     setUser(e.target.value);
@@ -20,6 +20,7 @@ const Search = () => {
     <form onSubmit={handleSubmit}>
       <input type="text" name="search" id="search" value={user} onChange={handleUser} />
       <button type="submit">Search user</button>
+      <div>{login}</div>
     </form>
   );
 };
