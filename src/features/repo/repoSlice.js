@@ -3,6 +3,8 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import ghInstance from '../../app/axiosInstance';
 
 export const fetchRepo = createAsyncThunk('repo/fetchRepo', async (owner, name) => {
+  console.log('name in slice', name);
+  console.log(`/repos/${owner}/${name}`);
   const response = await ghInstance.get(`/repos/${owner}/${name}`);
   return response.data;
 });
@@ -26,7 +28,7 @@ export const repoSlice = createSlice({
       })
       .addCase(fetchRepo.rejected, (state) => {
         state.status = 'rejected';
-        state.error = 'Error 404';
+        state.error = 'Error';
       });
   },
 });

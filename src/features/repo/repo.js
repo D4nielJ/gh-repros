@@ -10,7 +10,7 @@ const Repo = ({ owner, name }) => {
   useEffect(() => {
     console.log(name);
     dispatch(fetchRepo(owner, name));
-  }, []);
+  }, [owner, name]);
 
   return (
     <div>
