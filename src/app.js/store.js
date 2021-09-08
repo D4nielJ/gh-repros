@@ -3,13 +3,14 @@ import {
 } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import listReducer from '../features/list/listSlice';
+import userReducer from '../features/user/userSlice';
+
 
 const middlewares = [thunk, logger];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const reducer = combineReducers({
-  list: listReducer,
+  user: userReducer,
 });
 
 const store = createStore(reducer, composeEnhancers(applyMiddleware(...middlewares)));
