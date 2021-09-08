@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Search from '../home/search';
 import { fetchRepos, fetchUser } from './userSlice';
 
@@ -16,7 +17,11 @@ const User = ({ id }) => {
     }
   }, [id]);
 
-  const reposLi = repos.map((repo) => <li key={repo.id}>{repo.name}</li>);
+  const reposLi = repos.map((repo) => (
+    <li key={repo.id}>
+      <Link to={`/repo?owner=${repo.owner.login}&name=${repo.name}`}>{repo.name}</Link>
+    </li>
+  ));
 
   return (
     <section>

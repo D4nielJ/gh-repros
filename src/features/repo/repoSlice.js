@@ -2,8 +2,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import ghInstance from '../../app/axiosInstance';
 
-export const fetchRepo = createAsyncThunk('user/fetchUser', async (id) => {
-  const response = await ghInstance.get(`/repo/${id}`);
+export const fetchRepo = createAsyncThunk('repo/fetchRepo', async (owner, name) => {
+  const response = await ghInstance.get(`/repos/${owner}/${name}`);
   return response.data;
 });
 
