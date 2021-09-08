@@ -3,6 +3,7 @@ import ghInstance from '../../app/axiosInstance';
 
 export const fetchUser = createAsyncThunk('user/fetchUser', async (username) => {
   const response = await ghInstance.get(`/users/${username}`);
+  return response.data;
 });
 
 export const userSlice = createSlice({
