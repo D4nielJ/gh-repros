@@ -1,11 +1,9 @@
-import Search from "../features/home/search"
+import Search from '../features/home/search';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Search />
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Search />
+  </div>
+);
 
 export default App;
