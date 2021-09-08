@@ -37,6 +37,6 @@ Repo.propTypes = {
 Repo.defaultProps = {
   owner: '',
   name: '',
-}
+};
 
 export default Repo;

@@ -48,6 +48,6 @@ User.propTypes = {
 
 User.defaultProps = {
   id: '',
-}
+};
 
 export default User;
