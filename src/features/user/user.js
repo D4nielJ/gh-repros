@@ -28,13 +28,23 @@ const User = ({ id }) => {
       {user && (
         <div className="flex justify-center">
           {user.avatar_url && (
-            <div className="bg-bh-blue w-1/2 relative">
-              <img alt={id} className="mix-blend-overlay absolute inset-0 w-full h-full object-cover" src={user.avatar_url} />
+            <div className="w-1/2 p-3">
+              <div class="aspect-h-1 aspect-w-1 relative">
+                <img
+                  alt={id}
+                  className="bg-bh-blue mix-blend-overlay inset-0 w-full h-full object-cover absolute rounded-full"
+                  src={user.avatar_url}
+                />
+              </div>
             </div>
           )}
           <div class="w-1/2 px-3 py-10">
             {user.name && <h2>{user.name}</h2>}
-            {user.html_url && <a href={user.html_url} target="_blank"><h3>{user.login}</h3></a>}
+            {user.html_url && (
+              <a href={user.html_url} target="_blank">
+                <h3>{user.login}</h3>
+              </a>
+            )}
             <div>
               {user.followers && <span>{user.followers}</span>}
               {user.following && <span>{user.following}</span>}
