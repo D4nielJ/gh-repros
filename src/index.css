@@ -2,7 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* stylelint-enable */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+.repo-preview:nth-child(4n+1) {
+  background-color: #3B5A9A;
+}
+
+.repo-preview:nth-child(4n) {
+  background-color: #3B5A9A;
+}
+
+/* stylelint-enable */
