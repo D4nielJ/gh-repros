@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import { RepoIcon, StarIcon, RepoForkedIcon } from '@primer/octicons-react';
 

@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { PeopleIcon, PersonIcon } from '@primer/octicons-react';
 
-const Stats = ({ followers, following, repos }) => (
+const Stats = ({ followers, following }) => (
   <div className="text-sm text-white">
     {following && (
       <div>

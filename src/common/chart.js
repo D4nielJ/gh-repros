@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Pie } from 'react-chartjs-2';
 
 const Chart = ({ data }) => {

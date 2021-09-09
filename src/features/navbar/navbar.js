@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useHistory } from 'react-router-dom';
 import { ChevronLeftIcon, SearchIcon } from '@primer/octicons-react';
 
