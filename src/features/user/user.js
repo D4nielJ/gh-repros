@@ -44,7 +44,7 @@ const User = ({ id }) => {
               <h2 className="font-bold text-white text-2xl leading-tight">{user.name}</h2>
             )}
             {user.html_url && (
-              <a className="text-white underline mb-2 text-sm" href={user.html_url} target="_blank" rel="noreferrer">
+              <a className="text-white underline mb-2 text-sm " href={user.html_url} target="_blank" rel="noreferrer">
                 <h3>
                   @
                   {user.login}
@@ -55,7 +55,7 @@ const User = ({ id }) => {
           </div>
         </div>
       )}
-      <div className="px-4 py-1 text-white bg-bh-darkBlue flex justify-between items-center">
+      <div className="px-4 py-1 text-white  bg-bh-blue flex justify-between items-center">
         <h3 className="font-bold uppercase">Repositories</h3>
         <span>
           <RepoIcon size={16} className="mr-1" />
