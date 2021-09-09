@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Search from '../home/search';
+import Search from '../home/home';
 import { fetchRepos, fetchUser } from './userSlice';
 
 const User = ({ id }) => {
