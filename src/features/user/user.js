@@ -23,7 +23,9 @@ const User = ({ id }) => {
 
   return (
     <section className="min-h-screen bg-bh-lightBlue">
+
       <Navbar title={user.name} />
+
       {user && (
         <div className="flex">
           {user.avatar_url && (
@@ -55,6 +57,7 @@ const User = ({ id }) => {
           </div>
         </div>
       )}
+
       <div className="px-4 py-1 text-white  bg-bh-blue flex justify-between items-center">
         <h3 className="font-bold uppercase">Repositories</h3>
         <span>

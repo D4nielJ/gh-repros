@@ -7,10 +7,12 @@ const RepoPreview = ({ repo }) => (
       to={`/repo?owner=${repo.owner.login}&name=${repo.name}`}
       className="h-full flex flex-col justify-between"
     >
+
       <div className="mb-6 flex items-center">
         <RepoIcon size={16} className="mr-1" />
         <span className="font-bold text-base truncate">{repo.name}</span>
       </div>
+
       <div className="bottom">
         {repo.language && (
         <div className="mb-1">
@@ -19,14 +21,14 @@ const RepoPreview = ({ repo }) => (
         </div>
         )}
         <div>
-          <div className='mb-1'>
+          <div className="mb-1">
             <StarIcon size={16} className="mr-1" />
             <span className="mr-1">{repo.stargazers_count}</span>
             <RepoForkedIcon size={16} className="mr-1" />
             {repo.forks_count}
           </div>
           <div>
-            {(repo.size/1000).toFixed(2)}
+            {(repo.size / 1000).toFixed(2)}
             {' '}
             kb
           </div>
