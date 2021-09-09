@@ -1,5 +1,5 @@
 import { Switch, Route, useLocation } from 'react-router-dom';
-import Search from '../features/home/search';
+import Search from '../features/home/home';
 import User from '../features/user/user';
 import Repo from '../features/repo/repo';
 
