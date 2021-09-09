@@ -24,19 +24,25 @@ const User = ({ id }) => {
   ));
 
   return (
-    <section>
-      <Search />
-      <div className="user">
-        {id && <h2>{id}</h2>}
-        {user.avatar_url && (
-          <div>
-            <img alt={id} height="150" width="150" src={user.avatar_url} />
+    <section className="min-h-screen bg-bh-lightBlue">
+      {user && (
+        <div className="flex justify-center">
+          {user.avatar_url && (
+            <div className="bg-bh-blue w-1/2 relative">
+              <img alt={id} className="mix-blend-overlay absolute inset-0 w-full h-full object-cover" src={user.avatar_url} />
+            </div>
+          )}
+          <div class="w-1/2 px-3 py-10">
+            {user.name && <h2>{user.name}</h2>}
+            {user.html_url && <a href={user.html_url} target="_blank"><h3>{user.login}</h3></a>}
+            <div>
+              {user.followers && <span>{user.followers}</span>}
+              {user.following && <span>{user.following}</span>}
+              {user.public_repos && <span>{user.public_repos}</span>}
+            </div>
           </div>
-        )}
-        {user.followers && <span>{user.followers}</span>}
-        {user.following && <span>{user.following}</span>}
-        {user.public_repos && <span>{user.public_repos}</span>}
-      </div>
+        </div>
+      )}
       <ul className="repos">{reposLi}</ul>
     </section>
   );

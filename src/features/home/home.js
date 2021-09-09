@@ -22,7 +22,7 @@ const Search = () => {
         className="md:w-1/3 flex flex-col justify-center items-center bg-bh-lightBlue px-6 py-12 rounded"
       >
         <h2 className="w-3/4 text-center text-xl text-bh-black mb-4">
-          Search any user in GitHub
+          Search for any user on GitHub
         </h2>
         <input
           type="text"
@@ -30,7 +30,7 @@ const Search = () => {
           id="search"
           value={user}
           onChange={handleUser}
-          placeholder="username"
+          placeholder="Username"
           className="md:w-3/4 text-center text-bh-blue font-bold rounded px-1 py-2 mb-4"
         />
         <button
