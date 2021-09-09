@@ -27,6 +27,7 @@ const User = ({ id }) => {
       <Navbar title={user.name} />
 
       {user && (
+
         <div className="flex">
           {user.avatar_url && (
             <div className="w-44 py-4 pl-4">
@@ -41,12 +42,13 @@ const User = ({ id }) => {
               </div>
             </div>
           )}
+
           <div className="w-1/2 px-3 flex flex-col justify-center">
             {user.name && (
               <h2 className="font-bold text-white text-2xl leading-tight">{user.name}</h2>
             )}
             {user.html_url && (
-              <a className="text-white underline mb-2 text-sm " href={user.html_url} target="_blank" rel="noreferrer">
+              <a className="text-white underline mb-2 text-sm hover:text-gray-200 transition-all" href={user.html_url} target="_blank" rel="noreferrer">
                 <h3>
                   @
                   {user.login}

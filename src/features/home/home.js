@@ -21,9 +21,7 @@ const Search = () => {
         onSubmit={handleSubmit}
         className="md:w-1/3 flex flex-col justify-center items-center bg-bh-lightBlue px-6 py-12 rounded"
       >
-        <h2 className="w-3/4 text-center text-xl text-bh-black mb-4">
-          Search on GitHub
-        </h2>
+        <h2 className="w-3/4 text-center text-xl text-bh-black mb-4">Search on GitHub</h2>
         <input
           type="text"
           name="search"
@@ -34,7 +32,7 @@ const Search = () => {
           className="md:w-3/4 text-center text-bh-blue font-bold rounded px-1 py-2 mb-4"
         />
         <button
-          className="w-1/2 flex items-center justify-center rounded-md bg-bh-black hover:bg-bh-blue text-white px-1 py-2"
+          className="w-1/2 flex items-center justify-center rounded-md bg-bh-black hover:bg-black text-white px-1 py-2 transition-all"
           type="submit"
         >
           Go!
