@@ -15,19 +15,23 @@ const Navbar = ({ title }) => {
 
   return (
     <div className="bg-bh-darkBlue flex justify-between items-center px-4 py-2">
-      <span
+      <button
+        type="button"
         className="text-white cursor-pointer hover:text-gray-200 transition-all"
         onClick={handleChevron}
+        onKeyDown={() => {}}
       >
         <ChevronLeftIcon size={20} />
-      </span>
+      </button>
       <span className="uppercase text-white text-sm font-bold">{title}</span>
-      <span
+      <button
+        type="button"
         className="text-white cursor-pointer hover:text-gray-200 transition-all"
         onClick={handleSearch}
+        onKeyDown={() => {}}
       >
         <SearchIcon size={20} />
-      </span>
+      </button>
     </div>
   );
 };
