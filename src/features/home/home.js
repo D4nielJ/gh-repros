@@ -22,7 +22,7 @@ const Search = () => {
         className="md:w-1/3 flex flex-col justify-center items-center bg-bh-lightBlue px-6 py-12 rounded"
       >
         <h2 className="w-3/4 text-center text-xl text-bh-black mb-4">
-          Search for any user on GitHub
+          Search on GitHub
         </h2>
         <input
           type="text"
@@ -37,7 +37,7 @@ const Search = () => {
           className="w-1/2 flex items-center justify-center rounded-md bg-bh-black hover:bg-bh-blue text-white px-1 py-2"
           type="submit"
         >
-          Search user
+          Go!
         </button>
       </form>
     </section>

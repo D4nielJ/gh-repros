@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRepo } from './repoSlice';
+import Navbar from '../navbar/navbar';
 
 const Repo = ({ owner, name }) => {
   const dispatch = useDispatch();
@@ -13,19 +14,10 @@ const Repo = ({ owner, name }) => {
   }, [owner, name]);
 
   return (
-    <div>
-      Hello
-      {' '}
-      {name}
-      {' '}
-      and
-      {' '}
-      {owner}
-      {' '}
-      and
-      {' '}
-      {repo.owner && <div>{repo.owner.login}</div>}
-    </div>
+    <section>
+      <Navbar title={repo.name} />
+      Hello {name} and {owner} and {repo.owner && <div>{repo.owner.login}</div>}
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         'bh-blue': '#4369B2',
         'bh-lightBlue': '#5788E5',
-        'bh-DarkBlue': '#3B5A9A',
+        'bh-darkBlue': '#3B5A9A',
         'bh-black': '#1D1D1D',
       },
     },
