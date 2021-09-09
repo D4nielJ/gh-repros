@@ -15,7 +15,7 @@ const Search = () => {
   };
 
   return (
-    <section class="px-4 py-40 flex flex-col items-center bg-bh-black min-h-screen">
+    <section className="px-4 py-40 flex flex-col items-center bg-bh-black min-h-screen">
       <h1 className="font-black text-5xl italic tracking-tighter text-bh-lightBlue mb-8">repros</h1>
       <form
         onSubmit={handleSubmit}

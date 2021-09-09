@@ -16,7 +16,17 @@ const Repo = ({ owner, name }) => {
   return (
     <section>
       <Navbar title={repo.name} />
-      Hello {name} and {owner} and {repo.owner && <div>{repo.owner.login}</div>}
+      Hello
+      {' '}
+      {name}
+      {' '}
+      and
+      {' '}
+      {owner}
+      {' '}
+      and
+      {' '}
+      {repo.owner && <div>{repo.owner.login}</div>}
     </section>
   );
 };

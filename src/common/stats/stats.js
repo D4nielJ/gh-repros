@@ -6,7 +6,9 @@ const Stats = ({ followers, following, repos }) => (
       <div>
         <PersonIcon size={16} className="mr-1" />
         <span className="mr-1">
-          <span className="font-bold">{following}</span> Following
+          <span className="font-bold">{following}</span>
+          {' '}
+          Following
         </span>
       </div>
     )}
@@ -14,7 +16,9 @@ const Stats = ({ followers, following, repos }) => (
       <div>
         <PeopleIcon size={16} className="mr-1" />
         <span className="mr-1">
-          <span className="font-bold">{followers}</span> Followers
+          <span className="font-bold">{followers}</span>
+          {' '}
+          Followers
         </span>
       </div>
     )}
