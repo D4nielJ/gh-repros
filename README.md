@@ -17,7 +17,7 @@ All of the actions made by the user are handle by reducers and update internal a
 
 ## Documentation of the Project
 
-* Follow [this link to Loom](https://www.loom.com/share/2d355bc57c4046c19cf492082ccf48ab) to watch a short video presentation of my project.
+* Follow [this link to Loom](https://www.loom.com/share/21ca7fec4cb443a2bafaf870162e0426) to watch a short video presentation of my project.
 
 ## Preview
 
