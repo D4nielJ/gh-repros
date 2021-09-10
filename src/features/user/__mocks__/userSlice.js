@@ -4,22 +4,22 @@ import userPayload from './userFetch';
 import repoPayload from './reposFetch';
 
 export const fetchUser = createAsyncThunk('user/fetchUser', async (username) => {
+  const response = {
+    data: userPayload,
+  };
   if (username) {
-    const response = {
-      data: userPayload,
-    };
+    setTimeout(() => {}, 1000);
   }
-  setTimeout(() => {}, 1000);
   return response.data;
 });
 
 export const fetchRepos = createAsyncThunk('user/fetchRepos', async (username) => {
+  const response = {
+    data: repoPayload,
+  };
   if (username) {
-    const response = {
-      data: repoPayload,
-    };
+    setTimeout(() => {}, 1000);
   }
-  setTimeout(() => {}, 1000);
   return response.data;
 });
 

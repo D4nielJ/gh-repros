@@ -1,7 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { render, fireEvent, screen } from './test-utils';
 import App from '../app/App';
-import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 
 // Reset any runtime request handlers we may add during the tests.
@@ -12,10 +12,8 @@ test('renders correctly the app', () => {
       <App />
     </Router>,
   );
-  
-  expect(screen.getByText('repros')).toBeInTheDocument();
 
-  
+  expect(screen.getByText('repros')).toBeInTheDocument();
 });
 
 test('can navigate to a certain user', () => {
@@ -35,4 +33,4 @@ test('can navigate to a certain user', () => {
   fireEvent.click(screen.getByText('Size'));
 
   expect(screen.getByText('capstone-the-portal')).toBeInTheDocument();
-})
+});

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // test-utils.jsx
 import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
@@ -6,7 +7,7 @@ import { Provider } from 'react-redux';
 import { combineReducers } from 'redux';
 
 // Import your own reducer
-import userReducer from '../features/user/userSlice'
+import userReducer from '../features/user/userSlice';
 
 jest.mock('../features/user/userSlice');
 
@@ -29,7 +30,7 @@ function render(
 }
 
 // re-export everything
-export * from '@testing-library/react'
+export * from '@testing-library/react';
 
 // override render method
-export { render }
+export { render };

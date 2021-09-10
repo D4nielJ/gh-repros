@@ -8,14 +8,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 
 // Import your own reducer
-import userReducer from '../features/user/userSlice'
+import userReducer from '../features/user/userSlice';
 import User from '../features/user/user';
 
 jest.mock('../features/user/userSlice');
 
-let preloadedState = {};
+const preloadedState = {};
 
-let reducer = combineReducers({
+const reducer = combineReducers({
   user: userReducer,
 });
 
@@ -26,7 +26,7 @@ it('renders correctly the user', () => {
     .create(
       <Provider store={store}>
         <Router>
-          <User id={'d4nielj'} />
+          <User id="d4nielj" />
         </Router>
       </Provider>,
     )
