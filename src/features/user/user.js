@@ -45,7 +45,7 @@ const User = ({ id }) => {
 
   useEffect(() => {
     if (repos.length) {
-      getTopRepos();
+      getTopRepos(sortType);
     }
   }, [repos]);
 
@@ -103,11 +103,14 @@ const User = ({ id }) => {
           </span>
           <h3 className="uppercase">Repos</h3>
         </div>
-        <select className="text-bh-black" value={sortType} onChange={(e) => handleSortType(e)}>
-          <option value="Stars">Stars</option>
-          <option value="Forks">Forks</option>
-          <option value="Size">Size</option>
-        </select>
+        <div className="flex">
+          <p className="mr-1">Sort by:</p>
+          <select className="text-bh-black" value={sortType} onChange={(e) => handleSortType(e)}>
+            <option value="Stars">Stars</option>
+            <option value="Forks">Forks</option>
+            <option value="Size">Size</option>
+          </select>
+        </div>
       </div>
       {reposSorted.length > 0 ? (
         <FlipMove typeName="ul" className="grid grid-cols-2">
