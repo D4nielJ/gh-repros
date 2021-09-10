@@ -116,7 +116,9 @@ const User = ({ id }) => {
           ))}
         </FlipMove>
       ) : (
-        <p className="text-center pt-4 text-white font-bold">No repos available :c, try sorting the list</p>
+        <p className="text-center pt-4 text-white font-bold">
+          No repos available :c, try sorting the list
+        </p>
       )}
     </section>
   );
