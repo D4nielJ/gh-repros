@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { RepoIcon } from '@primer/octicons-react';
+import FlipMove from 'react-flip-move';
+
 import { fetchRepos, fetchUser } from './userSlice';
+
 import Stats from '../../common/stats';
 import Navbar from '../navbar/navbar';
 import RepoPreview from './repoPreview';
@@ -65,7 +68,6 @@ const User = ({ id }) => {
                   <img
                     alt={id}
                     className="bg-bh-blue inset-0 w-full h-full object-cover absolute rounded-full"
-                    // className="bg-bh-blue mix-blend-overlay inset-0 w-full h-full object-cover absolute rounded-full"
                     src={user.avatar_url}
                   />
                 </div>
@@ -84,7 +86,10 @@ const User = ({ id }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h3>@{user.login}</h3>
+                <h3>
+                  @
+                  {user.login}
+                </h3>
               </a>
             )}
             {user && <Stats followers={user.followers} following={user.following} />}
@@ -93,7 +98,7 @@ const User = ({ id }) => {
       )}
 
       <div className="px-4 py-1 text-white  bg-bh-blue flex justify-between items-center">
-        <div class="flex">
+        <div className="flex">
           <span className="mr-1">
             <RepoIcon size={16} className="mr-1" />
             <span className="font-bold">{user.public_repos}</span>
@@ -106,7 +111,7 @@ const User = ({ id }) => {
           <option value="Size">Size</option>
         </select>
       </div>
-      <ul className="repos grid grid-cols-2">{reposLi}</ul>
+      <FlipMove typeName="ul" className="grid grid-cols-2">{reposLi}</FlipMove>
     </section>
   );
 };

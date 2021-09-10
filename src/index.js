@@ -7,12 +7,12 @@ import App from './app/App';
 import store from './app/store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Router basename={process.env.PUBLIC_URL}>
-        <App />
-      </Router>
-    </Provider>
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <Provider store={store}>
+    <Router basename={process.env.PUBLIC_URL}>
+      <App />
+    </Router>
+  </Provider>,
+  // </React.StrictMode>,
   document.getElementById('root'),
 );
