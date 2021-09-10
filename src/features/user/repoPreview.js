@@ -39,4 +39,6 @@ const RepoPreview = forwardRef(({ repo }, ref) => (
   </li>
 ));
 
+RepoPreview.displayName = 'RepoPreview';
+
 export default RepoPreview;
