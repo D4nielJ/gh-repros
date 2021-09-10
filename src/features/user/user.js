@@ -84,7 +84,10 @@ const User = ({ id }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h3>@{user.login}</h3>
+                <h3>
+                  @
+                  {user.login}
+                </h3>
               </a>
             )}
             {user && <Stats followers={user.followers} following={user.following} />}
