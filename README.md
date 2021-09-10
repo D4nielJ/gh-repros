@@ -41,6 +41,18 @@ All of the actions made by the user are handle by reducers and update internal a
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Run in local machine following these steps.
+
+> 1. clone repo to your local machine
+> 2. cd to the directory
+> 3. create a .env.local file
+
+set a local enviroment variable to:
+
+REACT_APP_PTOKEN=`<replace with your token>`
+
+Get your token from your profile in github > settings > developer settings!
+
 ## Available Scripts
 
 In the project directory, you can run:
