@@ -47,13 +47,11 @@ const User = ({ id }) => {
     if (repos.length) {
       getTopRepos();
     }
-  }, []);
+  }, [repos]);
 
   useEffect(() => {
     getTopRepos(sortType);
   }, [sortType]);
-
-  const reposLi = reposSorted.map((repo) => <RepoPreview key={repo.id} repo={repo} />);
 
   return (
     <section className="min-h-screen bg-bh-lightBlue">
@@ -86,10 +84,7 @@ const User = ({ id }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h3>
-                  @
-                  {user.login}
-                </h3>
+                <h3>@{user.login}</h3>
               </a>
             )}
             {user && <Stats followers={user.followers} following={user.following} />}
@@ -111,7 +106,15 @@ const User = ({ id }) => {
           <option value="Size">Size</option>
         </select>
       </div>
-      <FlipMove typeName="ul" className="grid grid-cols-2">{reposLi}</FlipMove>
+      {reposSorted.length > 0 ? (
+        <FlipMove typeName="ul" className="grid grid-cols-2">
+          {reposSorted.map((repo) => (
+            <RepoPreview key={repo.id} repo={repo} />
+          ))}
+        </FlipMove>
+      ) : (
+        <p className="text-center pt-4 text-white font-bold">No repos available :c, try sorting the list</p>
+      )}
     </section>
   );
 };
