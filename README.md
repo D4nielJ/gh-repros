@@ -13,7 +13,7 @@ All of the actions made by the user are handle by reducers and update internal a
 
 ## Live demo
 
-* [Live Demo Here](https://613babebfa12d100075af5a6--nifty-goldberg-ee208d.netlify.app/)
+* [Live Demo Here](https://ghrepros.netlify.app/)
 
 ## Documentation of the Project
 
